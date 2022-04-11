@@ -1,0 +1,77 @@
+:root {
+  --clr-primary: hsl(193, 38%, 86%);
+  --clr-secondary: hsl(150, 100%, 66%);
+
+  --bg-nose: hsl(217, 19%, 38%);
+  --bg-card: hsl(217, 19%, 24%);
+  --bg-main: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-main);
+  display: grid;
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.advice-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  color: var(--clr-primary);
+  padding: 2.5rem;
+}
+
+.advice {
+  font: inherit;
+  font-size: 1.75rem;
+  width: 25ch;
+  text-align: center;
+}
+
+.advice-id {
+  color: var(--clr-secondary);
+  font-size: .9rem;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advice-button {
+  background-color: var(--clr-secondary);
+  border: none;
+  border-radius: 50%;
+  color: var(--bg-main);
+  cursor: pointer;
+  display: block;
+  font-size: 1.75rem;
+  margin-bottom: calc(-2.5rem - 1em);
+  margin-inline: auto;
+  height: 2em;
+  transition: box-shadow ease .2s, transform ease .3s;
+  width: 2em;
+}
+
+.advice-button.animate {
+  transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .advice-button:active {
+    box-shadow: 0 0 1em 0 var(--clr-secondary);
+  }
+}
+
+@media (min-width: 769px) {
+  .advice-button:hover {
+    box-shadow: 0 0 1em 0 var(--clr-secondary);
+  }
+}
